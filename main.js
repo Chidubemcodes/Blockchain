@@ -11,6 +11,14 @@ class Block {
 
   // hashes all the block data
   calculateHash() {
+    // i deside to hash multiple times for some weird reason
+    // this.hash1 = SHA256(
+    //   this.index + this.previousHash + this.timestamp + this.data + this.nonce
+    // ).toString();
+    // this.hash2 = SHA256(this.hash1).toString();
+    // this.hash3 = SHA256(this.hash2).toString();
+    // return SHA256(this.hash3).toString();
+
     return SHA256(
       this.index + this.previousHash + this.timestamp + this.data + this.nonce
     ).toString();
@@ -58,7 +66,7 @@ class Blockchain {
     return true;
   }
 }
-let value = "thidfdjfks"; // you can change this
+let value = "heakofkofkoawkfd"; // you can change this
 
 const d = new Date();
 let time = d.getTime();
